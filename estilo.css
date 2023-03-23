@@ -1,0 +1,397 @@
+* { box-sizing: border-box; 
+  padding: 0; 
+  margin: 0; 
+} 
+
+
+
+body {
+  background-color:#d8bee7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.contenedor {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 100px;
+  background: #d8bee7;
+  margin: 50px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border-top: 2px solid #6665ee;
+  border-left: 2px solid #6665ee;
+  box-shadow:  4px 5px 7px 3px #6665ee;
+  
+}
+
+.contenedor .izquierda {
+  position: relative;
+  background: #722f99;
+  padding: 40px;
+  
+}
+
+.perfil {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #6665ee;
+}
+
+.perfil .imagen {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #722f99;
+	box-shadow: 4px 7px 8px 6px #b274ec59;
+
+}
+
+.perfil .imagen img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+
+}
+
+.perfil h2 {
+  color: #fff;
+  font-size: 25px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.4em;
+  text-shadow: 1px 2px 4px rgba(196, 137, 230, 0.767) ;
+}
+
+.perfil h2 span {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.infodecontacto {
+  padding-top: 40px;
+  color: black;
+  text-align: center;
+  font-size: 15px;
+}
+
+.titulo {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  
+}
+
+.infodecontacto ul {
+  position: relative;
+}
+
+.infodecontacto ul li {
+  position: relative;
+  list-style: none;
+  margin: 10px 0;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.infodecontacto ul li .icono {
+  display: inline-block;
+  width: 30px;
+  font-size: 18px;
+  color: #c18ef175;
+}
+
+.infodecontacto ul li span {
+  font-weight: 300;
+}
+
+.infodecontacto.educacion li {
+  margin-bottom: 15px;
+}
+
+.infodecontacto.educacion h5 {
+  color: #c18ef175;
+  font-weight: 500;
+}
+
+.infodecontacto.educacion h4:nth-child(2) {
+  color: black;
+  font-weight: 500;
+}
+
+.infodecontacto.educacion h4 {
+  color: black;
+  font-weight: 300;
+}
+
+.infodecontacto.idiomas .porcentaje {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background: #a59ba8;
+  display: block;
+  margin-top: 5px;
+}
+
+.infodecontacto.idiomas .porcentaje div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #fff;
+
+}
+
+
+
+.contenedor .derecha {
+  position: relative;
+  background: #ddcfe4;
+  padding: 40px;
+  border-right: 1px solid #6665ee;
+}
+
+.sobremi {
+  margin-bottom: 50px;
+}
+.sobremi:last-child {
+  margin-bottom: 0;
+}
+
+.titulo2 {
+  text-shadow: 1px 1px 2px #38343dda;
+  color: #6665ee;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  
+}
+
+p {
+  color: rgb(9, 3, 20);
+  font-size: 18px;
+}
+
+.sobremi .caja {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0;
+}
+
+.sobremi .caja .año-empresa {
+  min-width: 150px;
+}
+
+.sobremi .caja .año-empresa h5 {
+  text-transform: uppercase;
+  color: #602d91dc;
+  font-weight: 600;
+}
+
+.sobremi .caja .texto h4 {
+  text-transform: uppercase;
+  color: #602d91dc;
+  font-size: 16px;
+}
+
+.skills-bar {
+  display: grid;
+  position: relative;
+  width: 100%;
+  background: #ddcfe4;
+  border-radius: 10px;
+  padding: 15px 20px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2); ;
+}
+.skills-bar .bar {
+  margin: 8px 0;
+}
+.skills-bar .bar:first-child {
+  margin-top: 0px;
+}
+.skills-bar .bar .info {
+  margin-bottom: 5px;
+}
+.skills-bar .bar .info span {
+  font-size: 17px;
+  font-weight: 500;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+  100%{
+    opacity: 1;
+  }
+}
+.skills-bar .bar .progress-line {
+  position: relative;
+  height: 10px;
+  width: 100%;
+  background: #f0f0f0;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  box-shadow: inset 0px 1px 1px rgba(0,0,0,0.05),
+                    0px 1px 1px rgba(255,255,255,0.8);
+  animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.bar .progress-line span {
+  height: 100%;
+  width: 80%;
+  background: #6665ee;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animate{
+  100%{transform: scale(1);}
+}
+.progress-line.html span {
+  width: 90%;
+}
+.progress-line.css span {
+  width: 80%;
+}
+.progress-line.javascript span {
+  width: 75%;
+}
+.progress-line.php span {
+  width: 85%;
+}
+.bar .progress-line span::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: -10px;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+.bar .progress-line span::after {
+  position: absolute;
+  
+  right: 0;
+  top: -28px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  background: #000;
+  padding: 1px 8px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+@keyframes showText2 {
+  100%{
+    opacity: 1;
+  }
+}
+  
+
+.progress-line.html span::after {
+  content: "90%";
+}
+.progress-line.css span::after {
+  content: "80%";
+}
+.progress-line.javascript span::after {
+  content: "75%";
+}
+.progress-line.php span::after {
+  content: "85%";
+}
+
+.intereses {margin-top: 50px;
+}
+
+.intereses ul {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.intereses ul li {
+  list-style: none;
+  color: black;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.boton {
+  border: 1px solid #5f4970;
+  font-weight: 300;
+  font-size: 18px;
+  padding: 10px;
+  color:#5f4970; 
+  
+}
+  
+ .boton:hover {background-color:  #612d9194;
+}
+
+.boton2 {
+  margin-top: 20px;
+  border: 1px solid #3b3044;
+  font-weight: 400;
+  font-size: 15.7px;
+  padding: 5px;
+  color:#3b3044; 
+}
+
+.boton2:hover {background-color:  #612d91ad;
+}
+
+
+@media (max-width: 1000px)
+{
+  .contenedor {
+    margin: 10px;
+    grid-template-columns: repeat(1,1fr);
+  }
+  .intereses ul {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (max-width: 600px)
+{
+  .sobremi .caja {
+    flex-direction: column;
+  }
+  .sobremi .caja .año-empresa {
+    margin-bottom: 5px;
+  }
+  .intereses ul {
+    grid-template-columns: repeat(1,1fr);
+  }
+  .habilidades .caja {
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+
